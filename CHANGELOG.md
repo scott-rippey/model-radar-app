@@ -5,6 +5,17 @@ Newest first. Mirror each release's notes into the public repo's CHANGELOG.md.
 ### New / ### Improved / ### Fixed
 -->
 
+## 1.1.1
+
+### Improved
+
+- After an update that changes the scan rules, every project is marked changed automatically, so one click of Rescan changed refreshes all the evidence. You no longer need to know to run a full rescan.
+- Project titles stay distinct when two projects would share nearly the same name; the qualifier that tells them apart is kept instead of being trimmed away.
+- The Models view section is now titled "Available models by provider" and explains what it shows: everything each provider offers right now, pulled live. Provider lists start closed and open individually.
+- Expanding lists use a rotating chevron everywhere.
+- Check for changes now reports its result right in the toolbar, including "No changes found", instead of finishing silently.
+- Evened out the spacing around the dashboard legend.
+
 ## 1.1.0
 
 ### New

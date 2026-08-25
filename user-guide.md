@@ -42,9 +42,9 @@ Model Radar checks your projects for changes when it starts and every 30 minutes
 
 ## Models view
 
-**Refresh provider lists** pulls the current model list from every provider you have a key for. **Check model status** compares the models your projects use against those lists. Anything missing from its provider's list is marked, and a web search adds the announcement details and the replacement when one exists. The same status dots then appear on the dashboard chips.
+**Refresh available models** pulls the current model list from every provider you have a key for. **Check model status** compares the models your projects use against those lists. Anything missing from its provider's list is marked, and a web search adds the announcement details and the replacement when one exists. The same status dots then appear on the dashboard chips.
 
-Hover any model under "Models your projects use" to see exactly which projects use it. Each provider's list starts open and collapses on its own toggle.
+Hover any model under "Models your projects use" to see exactly which projects use it. "Available models by provider" shows everything each provider offers right now; each provider's list starts closed and opens on its own toggle.
 
 ## Chat
 
