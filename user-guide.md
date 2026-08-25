@@ -23,7 +23,7 @@ You only add a key once; it is stored encrypted in your Keychain.
 - **Flags** under the chips explain special situations, such as models stored in a database or model strings that are probably data rather than usage.
 - **"changed"** or **"new"** on a card means the freshness sweep saw the project change since its last scan. Use **Rescan N changed** in the header, or the circular arrow on the card.
 
-Click a card to open the project. Each model expands to show its evidence; click a file path to reveal it in Finder. **Dismiss** hides a finding you know is wrong; it stays dismissed through rescans and can be restored.
+Click a card to open the project. Each model expands to show its evidence, most relevant line first; click a file path to reveal it in Finder. The Raw evidence list has a filter box, so typing a model id or file name shows exactly where anything comes from. **Dismiss** hides a finding you know is wrong; it stays dismissed through rescans and can be restored.
 
 ## Scanning
 

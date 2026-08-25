@@ -5,6 +5,13 @@ Newest first. Mirror each release's notes into the public repo's CHANGELOG.md.
 ### New / ### Improved / ### Fixed
 -->
 
+## 1.1.3
+
+### Improved
+
+- Expanding a model on a project page now shows the evidence lines that actually contain that model first, with context lines after, so you can see at a glance where an identification came from.
+- The Raw evidence list has a filter box: type any model id, file name, or text and the list narrows instantly.
+
 ## 1.1.2
 
 ### Improved
