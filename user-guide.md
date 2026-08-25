@@ -18,6 +18,8 @@ You only add a key once; it is stored encrypted in your Keychain.
 - **Amber chip**: low confidence. Open the project to read the evidence and decide.
 - **Chip ending in `*`**: the model is set at runtime; the chip shows the default found in code.
 - **Coloured dot on a chip**: the model's status from the last check (green current, amber deprecated, red not in the provider's list).
+- **The legend under the toolbar** spells out the whole color language, so you never have to guess what a chip and dot combination means.
+- **Red retired counter in the window header**: how many models your projects still use that a provider has retired. It needs no scan, and it clears only when a rescan shows the code no longer uses them or the provider lists them again. Click it to open Models.
 - **Flags** under the chips explain special situations, such as models stored in a database or model strings that are probably data rather than usage.
 - **"changed"** or **"new"** on a card means the freshness sweep saw the project change since its last scan. Use **Rescan N changed** in the header, or the circular arrow on the card.
 
@@ -32,6 +34,8 @@ Click a card to open the project. Each model expands to show its evidence; click
 
 Settings > Scanning lets you pick which provider and model do the identification. Anthropic is the default. Other providers become available as soon as you add their key; their model suggestions come from the Models view after you refresh the provider lists.
 
+Markdown files are never scanned. Documentation describes models; it does not run them, so a model name counts only when it appears in real code or config. To skip more, add your own rules in **Settings > Scan ignores**, one glob per entry (for example `*.txt` or `runs/**`). They take effect on the next scan and also narrow the chat assistant's searches.
+
 ## Keeping it fresh
 
 Model Radar checks your projects for changes when it starts and every 30 minutes while it is open. It never runs while the app is closed. Changed projects get a badge; you decide when to spend an AI request on them. If you would rather have that happen automatically, turn on **Rescan changed projects automatically** in Settings > Scanning.
@@ -39,6 +43,8 @@ Model Radar checks your projects for changes when it starts and every 30 minutes
 ## Models view
 
 **Refresh provider lists** pulls the current model list from every provider you have a key for. **Check model status** compares the models your projects use against those lists. Anything missing from its provider's list is marked, and a web search adds the announcement details and the replacement when one exists. The same status dots then appear on the dashboard chips.
+
+Hover any model under "Models your projects use" to see exactly which projects use it. Each provider's list starts open and collapses on its own toggle.
 
 ## Chat
 
@@ -48,14 +54,16 @@ Open **Chat** and describe what you want, for example:
 - "Which projects still use claude-3-5-haiku?"
 - "Read the AI client in SOP Admin and tell me if the model can be changed at runtime."
 
-The assistant can list folders, search with ripgrep, and read files, all read-only. The only thing it can write is a finding into the inventory, and each one shows up as a chip in the transcript and on the dashboard. Chats are saved in the left sidebar.
+The assistant can list folders, search with ripgrep, and read files, all read-only. The only thing it can write is a finding into the inventory, and each one shows up as a chip in the transcript and on the dashboard. Chats are saved in the left sidebar. Chat runs on your Anthropic key; pick which Anthropic model it uses in **Settings > Chat**.
 
 Each chat belongs to the development folder it was started in. If you change the folder in Settings, older chats stay readable (marked with an hourglass in the sidebar) but cannot be continued, because their conversation contains excerpts from the previous folder. Start a new chat instead.
 
 ## Settings
 
-- **Font size** scales the entire app. **Glass window** makes the window transparent so your desktop shows through; it re-opens the window when toggled.
+- **Font size**: the slider previews on the Appearance card only; **Apply** resizes the whole app in one step. The top bar keeps its own size at every setting. **Glass window** makes the window transparent so your desktop shows through; it re-opens the window when toggled.
 - **API keys**: add, replace, verify, or remove a key per provider. If the Keychain can no longer decrypt the key store (this can happen after a macOS password reset), the card offers a reset; the old file is kept as a backup.
+- **Scan ignores**: your own skip rules on top of the built-ins, one glob per entry.
+- **Chat**: which Anthropic model the assistant uses.
 - **Database**: where the inventory lives, its size, and row counts. Reveal it in Finder if you want to back it up.
 - **Updates**: the current version and a manual check. Updates download in the background; they apply when you quit the app or choose Model Radar > Restart to Update.
 - **System health**: quick status of the folder, bundled ripgrep, database, and Keychain.
