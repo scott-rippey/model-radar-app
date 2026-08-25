@@ -32,13 +32,13 @@ What is running today. No changelog here; see `CHANGELOG.md` for version history
 
 - Ask about the inventory or point the assistant at a folder: "I just added Customers/Acme/portal, go look at it and record what it uses."
 - The assistant has three read-only tools (list a folder, search with ripgrep, read a file range) and exactly one write tool, which records a finding into Model Radar's own database. It can never modify a file in your development folder.
-- Every tool call shows up in the transcript. Chats are saved and can be resumed or deleted.
+- Every tool call shows up in the transcript. Chats are saved and can be resumed or deleted. Each chat is bound to the development folder it was started in; after you change folders, older chats stay readable but cannot be continued.
 - Chat uses your Anthropic key.
 
 ## Keys and privacy
 
 - Bring your own key for Anthropic, OpenAI, Google, and xAI. Keys are stored encrypted in the macOS Keychain, never in the database, and never shown again after you save them. Verify tests a key with the cheapest read-only call the provider offers.
-- Your code stays on your Mac. Stage two sends only short excerpts around each hit; the full files never leave.
+- Scanning sends only short excerpts around each hit; a scan never uploads full files. Chat sends what the assistant reads to answer you (up to 400 lines per file read, 200 matching lines per search) to Anthropic, and refuses to read files that look like secret stores (.env files, keys, certificates, credentials files).
 - Read-only by construction: the app has no code path that writes into the scanned folder.
 
 ## Settings

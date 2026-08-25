@@ -2,10 +2,12 @@
 
 ## First launch
 
-1. Open Model Radar. The first screen asks for your development folder. Click **Choose** and pick the folder that contains your projects (for example `App Development`). macOS may ask permission to read that location; allow it.
-2. Click **Start first scan**. The free stage-one scan finds your projects and their AI evidence in a second or two. You land on the dashboard with grey, unverified model chips.
-3. Go to **Settings > API keys**, click **Add key** next to Anthropic, paste your key, and press Save. Click **Verify** to confirm the provider accepts it.
-4. Back on the dashboard, click **Rescan all**. Model Radar now identifies the models in each project. Chips turn teal, project summaries appear, and flags call out anything set at runtime.
+Nothing is gated. Every part of the app is reachable from the first second, and the dashboard tells you what is missing.
+
+1. Open Model Radar. The dashboard asks for your development folder. Click **Choose your development folder** and pick the folder that contains your projects (for example `App Development`). macOS may ask permission to read that location; allow it. You can also set or change the folder any time in **Settings > Scan root**.
+2. A scan runs on its own the moment the folder is chosen. With no API key stored yet it is the free part only: in a second or two your projects appear as cards with grey, unverified model chips. If you added a key before choosing the folder, the same scan also identifies the models right away (that part uses your key), and the chips come up teal.
+3. If you have not added a key, a banner explains the next step. Go to **Settings > API keys**, click **Add key** next to Anthropic, paste your key, press Save, and click **Verify**.
+4. Back on the dashboard the banner now offers **Identify models**. Click it and Model Radar identifies the models in every project. Chips turn teal, project summaries appear, and flags call out anything set at runtime.
 
 You only add a key once; it is stored encrypted in your Keychain.
 
@@ -48,6 +50,8 @@ Open **Chat** and describe what you want, for example:
 
 The assistant can list folders, search with ripgrep, and read files, all read-only. The only thing it can write is a finding into the inventory, and each one shows up as a chip in the transcript and on the dashboard. Chats are saved in the left sidebar.
 
+Each chat belongs to the development folder it was started in. If you change the folder in Settings, older chats stay readable (marked with an hourglass in the sidebar) but cannot be continued, because their conversation contains excerpts from the previous folder. Start a new chat instead.
+
 ## Settings
 
 - **Font size** scales the entire app. **Glass window** makes the window transparent so your desktop shows through; it re-opens the window when toggled.
@@ -62,4 +66,4 @@ The assistant can list folders, search with ripgrep, and read files, all read-on
 
 ## Privacy
 
-Your code stays on your Mac. The AI stage sends only the matched lines and a few lines of context around them. Keys never leave the Keychain except in the calls you trigger to that provider. The app cannot write into your development folder.
+Scanning sends only the matched lines and a few lines of context around them to your provider; full files are never uploaded by a scan. Chat is different: whatever the assistant reads to answer you (up to 400 lines per file read, up to 200 matching lines per search) is sent to Anthropic as part of the conversation, so only point it at code you are comfortable sharing with your provider. Files that look like secret stores (.env files, keys, certificates, credentials files) are never read by the assistant. Keys never leave the Keychain except in the calls you trigger to that provider. The app cannot write into your development folder.
