@@ -34,7 +34,7 @@ Click a card to open the project. Each model expands to show its evidence; click
 
 Settings > Scanning lets you pick which provider and model do the identification. Anthropic is the default. Other providers become available as soon as you add their key; their model suggestions come from the Models view after you refresh the provider lists.
 
-Markdown files are never scanned. Documentation describes models; it does not run them, so a model name counts only when it appears in real code or config. To skip more, add your own rules in **Settings > Scan ignores**, one glob per entry (for example `*.txt` or `runs/**`). They take effect on the next scan and also narrow the chat assistant's searches.
+Markdown files are never scanned. Documentation describes models; it does not run them, so a model name counts only when it appears in real code or config. To skip more, add your own rules in **Settings > Scan ignores**, one glob per entry (for example `*.txt` or `runs/**`). Saving a change marks every project as changed; one click of **Rescan changed** applies the new rules everywhere. They also narrow the chat assistant's searches.
 
 ## Keeping it fresh
 

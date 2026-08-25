@@ -5,6 +5,13 @@ Newest first. Mirror each release's notes into the public repo's CHANGELOG.md.
 ### New / ### Improved / ### Fixed
 -->
 
+## 1.1.2
+
+### Improved
+
+- Saving a change to Scan ignores now marks every project as changed, so one click of Rescan changed applies the new rules everywhere. Previously the rules waited for a full rescan without saying so.
+- The "changed" language is clearer everywhere: the button reads "Rescan N changed projects", the check result names projects, and hovering a changed, new, or missing badge on a card explains exactly what it means and what a rescan will do.
+
 ## 1.1.1
 
 ### Improved
