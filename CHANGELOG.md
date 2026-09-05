@@ -5,6 +5,12 @@ Newest first. Mirror each release's notes into the public repo's CHANGELOG.md.
 ### New / ### Improved / ### Fixed
 -->
 
+## 1.1.4
+
+### New
+
+- Help > More Power Your Process Apps opens the Hangar Deck download page in your browser. Hangar Deck is the launcher that installs and updates Model Radar, CC Blackbox, and every Power Your Process app that follows, from one place.
+
 ## 1.1.3
 
 ### Improved

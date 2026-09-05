@@ -13,6 +13,8 @@ A macOS app that keeps a read-only inventory of the AI models used across your d
 
 Install once. The app keeps itself current from this repository's releases automatically; a fresh download is only needed for a new machine.
 
+Prefer one place for all the Power Your Process apps? **[Hangar Deck](https://github.com/scott-rippey/hangar-deck-app)** installs and updates Model Radar, CC Blackbox, and whatever comes next, and tells you when a new version lands.
+
 Requires an Apple Silicon Mac on a recent macOS.
 
 See the [user guide](user-guide.md) and [features](features.md).
